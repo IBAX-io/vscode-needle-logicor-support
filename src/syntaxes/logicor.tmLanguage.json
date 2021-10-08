@@ -1,0 +1,143 @@
+{
+	"fileTypes": [
+		"logicor"
+	],
+	"name": "logicor",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"tag-code": {
+			"name": "string.html.logicor",
+			"begin": "Code\\s*\\(",
+			"end": "^\\s*\\)\\s*$",
+			"pattern": "(.*?)"
+		},
+		"comparsion-operator": {
+			"name": "keyword.operator.comparison.logicor",
+			"match": "\\b(==|!=|>|<|<=|>=)\\b"
+		},
+		"error-func": {
+			"name": "invalid.illegal.logicor",
+			"match": "\\b(\\w)+\\b(?=[\\(\\{])"
+		},
+		"error-g": {
+			"name": "invalid.illegal.logicor",
+			"match": "\\b(FindEcosystem|CallContract|ContractAccess|ContractConditions|EvalCondition|ValidateCondition|Contains|Float|HasPrefix|HexToBytes|Int|Len|PubToID|Replace|Size|Sha256|Sprintf|Str|Substr|UpdateLang|SysParamString|SysParamInt|UpdateSysParam)\\b(?=\\()"
+		},
+		"autodefined": {
+			"name": "variable.language.logicor",
+			"match": "\\b$(key_id|ecosystem_id|type|time|block|block_time|block_key_id|isMobile)\\b"
+		},
+		"logicor": {
+			"name": "entity.name.class.logicor",
+			"match": "\\b(Hint|QRcode|GetColumnType|Button|Map|InputMap|Chart|Div|Span|Table|AddToolButton|Em|Form|Image|ImageInput|Input|Validate|InputErr|Label|LinkPage|MenuGroup|MenuItem|Now|P|RadioGroup|Select|Strong)(?=\\()|\\.(Popup|Alert|Style|CompositeContract|Show|Hide)(?=\\()"
+		},
+		"logicor-params": {
+			"name": "variable.language.logicor",
+			"match": "\\b(App|Data|Table|Column|From|To|Step|Hmap|Icon|FieldLabel|FieldValue|Colors|Class|Body|Source|Name|Contract|Wallet|Title|Value|Disabled|Placeholder|Format|Width|Ratio|Alt|Src|Condition|Source|PageParams|Page|Params|Type|NameColumn|ValueColumn|Columns|Index|For|Prec|Exp|MapType|Text|ConfirmButton|CancelButton|Ecosystem)(?=:)"
+		},
+		"logicor-func": {
+			"name": "entity.name.function.logicor",
+			"match": "\\b(Binary\\(\\)\\.ById)(?=\\()|\\b(Money|Binary|AppParam|Range|ArrayToSource|JsonToSource|SysParam|Calculate|Code|Val|Include|LangRes|EcosysParam|ForList|Or|And|Address|AddressToId|SetVar|CmpTime|Data|DateTime|SetTitle|GetVar|If|DBAmount|DBString|DBFind|DBInsert|DBInsertReport|DBUpdate|DBUpdateExt)(?=\\()|\\.(ElseIf|Where|WhereId|Order|Limit|Offset|Custom|Vars|Columns|Count)(?=\\()|\\.(Else)(?=\\{)"
+		},
+		"removed": {
+			"name": "invalid.illegal.logicor",
+			"match": "\\b(TxButton|GetOne|GetRow|BtnContract|TxButton|TxForm|Navigation|LiTemplate|BtnPage|BtnEdit|Back|PageTitle|Title|FullScreen|WhiteMobileBg|WiAccount|WiBalance|WiCitizen|LangJS|BlockInfo|TxId|Json|AutoUpdate|GetList|GetMap|ListVal|ValueById|Source|TextHidden|InputMoney|InputDate|InputAddress|Textarea|UList|MarkDown|Legend|LiBegin|Mult|Trim|StateLink|StateValDBInt|DBRow|DBIntExt|DBIntWhere|DBRowExt|DBStringExt|DBStringWhere)(?=[\\(\\{])"
+		},
+		"variable": {
+			"name": "variable.other.logicor",
+			"match": "#[\\w.-]+#"
+		},
+		"lang-res": {
+			"name": "variable.parameter.logicor",
+			"match": "\\$[@\\w.-]+\\$"
+		},
+		"class-name": {
+			"name": "string.html.logicor",
+			"match": "[\\`\\'\\s\\w]*-[\\`\\'\\s\\w]*"
+		},
+		"strings": {
+			"name": "string.quoted.double.logicor",
+			"begin": "\"",
+			"end": "\"",
+			"pattern": ".*?"
+		},
+		"strings2": {
+			"name": "string.quoted.single.logicor",
+			"begin": "`",
+			"end": "`",
+			"pattern": ".*?"
+		},
+		"strings3": {
+			"name": "string.quoted.single.logicor",
+			"begin": "'",
+			"end": "'",
+			"pattern": ".*?"
+		},
+		"error-g-comments": {
+			"name": "invalid.illegal.logicor",
+			"match": "//.*$"
+		},
+		"cyr-text": {
+			"name": "comment.line.g",
+			"match": "[а-яА-Я]"
+		},
+		"expression": {
+			"name": "meta.expression.logicor",
+			"patterns": [
+				{
+					"include": "#cyr-text"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#tag-code"
+				},
+				{
+					"include": "#strings2"
+				},
+				{
+					"include": "#strings3"
+				},
+				{
+					"include": "#comparsion-operator"
+				},
+				{
+					"include": "#logicor-params"
+				},
+				{
+					"include": "#error-g"
+				},
+				{
+					"include": "#logicor"
+				},
+				{
+					"include": "#logicor-func"
+				},
+				{
+					"include": "#lang-res"
+				},
+				{
+					"include": "#variable"
+				},
+				{
+					"include": "#autodefined"
+				},
+				{
+					"include": "#error-g-comments"
+				},
+				{
+					"include": "#removed"
+				},
+				{
+					"include": "#error-func"
+				}
+			]
+		}
+	},
+	"scopeName": "source.logicor"
+}

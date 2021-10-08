@@ -1,0 +1,123 @@
+{
+	"fileTypes": [
+		"needle"
+	],
+	"name": "needle",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"type-literal": {
+			"name": "entity.name.type.needle",
+			"match": "(?<!\\.|\\$)\\b(bool|bytes|int|address|array|map|money|float|string)\\b(?!\\$|\\.)"
+		},
+		"DBFind-param": {
+			"name": "variable.language.needle",
+			"match": "\\.(Columns|Where|WhereId|Order|Limit|Offset|One|Row)\\b"
+		},
+		"control-statement": {
+			"name": "keyword.control.needle",
+			"match": "(?<!\\.|\\$)\\b(true|false|nil|contract|data|conditions|action|return|var|if|elif|while|func|else|break|continue)\\b(?!\\$|\\.)"
+		},
+		"needle": {
+			"name": "entity.name.function.needle",
+			"match": "(?<!\\.|\\$)\\b(Log|Log10|Pow|Sqrt|Round|Floor|FormatMoney|PubToHex|HexToPub|ContractName|ColumnCondition|CreateColumn|ValidateEditContractNewValue|DBSelect|CreateTable|Money|HMac|PermColumn|NewMoney|Random|PermTable|ToLower|ToUpper|TrimSpace|RollbackEcosystem|CreateEcosystem|UpdateContract|CreateContract|TableConditions|RollbackTable|CreateLanguage|RollbackColumn|Activate|EditLanguage|RollbackContract|Deactivate|RollbackNewContract|RollbackEditContract|RowConditions|MD5|EncodeBase64|GetColumnType|EditEcosysName|AllowChangeCondition|GetType|Append|SetPubKey|GetMapKeys|SortedKeys|UploadBinary|JSONEncode|JSONEncodeIndent|JSONDecode|Println|StringToBytes|BytesToString|AppParam|DecodeBase64|JSONToMap|Split|Join|info|warning|error|LangRes|FindEcosystem|CallContract|ContractAccess|ContractConditions|EvalCondition|ValidateCondition|AddressToId|Contains|Float|HasPrefix|HexToBytes|Int|Len|PubToID|IdToAddress|Money|Replace|Size|Sha256|Sprintf|Str|Substr|UpdateLang|SysParamString|SysParamInt|UpdateSysParam|EcosysParam|DBFind|DBInsert|DBInsertReport|DBUpdate|DBUpdateExt|DBUpdateSysParam|DBIntExt|DBStringExt|GetContractById|GetContractByName|DateTime|UnixDateTime|RoleAccess|TransactionInfo|UpdateRolesNotifications|UpdateNotifications)\\b(?!\\$|\\.)"
+		},
+		"needle-ext": {
+			"name": "entity.name.function.needle",
+			"match": "(?<!\\.|\\$)\\b(MoneyTransfer|NewContract|EditContract|ActivateContract|NewEcosystem|NewParameter|EditParameter|NewMenu|EditMenu|AppendMenu|NewPage|EditPage|AppendPage|NewLang|EditLang|NewSign|EditSign|NewBlock|EditBlock|NewTable|EditTable|NewColumn|EditColumn|Import|DeactivateContract)\\b(?!\\$|\\.)"
+		},
+		"autodefined": {
+			"name": "variable.language.needle",
+			"match": "(?<!\\.|\\$)\\b$(key_id|ecosystem_id|time|block|block_time|block_key_id|original_contract|this_contract|result)\\b(?!\\$|\\.)"
+		},
+		"defined-var": {
+			"name": "variable.other.needle",
+			"match": "\\B\\$([a-zA-Z0-9_]*)\\b"
+		},
+		"removed": {
+			"name": "invalid.illegal.needle",
+			"match": "(?<!\\.|\\$)\\b(GetOne|GetRow|BtnContract|TxButton|TxForm|Navigation|LiTemplate|BtnPage|BtnEdit|Back|PageTitle|Title|FullScreen|WhiteMobileBg|WiAccount|WiBalance|WiCitizen|LangJS|BlockInfo|TxId|Json|AutoUpdate|GetList|GetMap|ListVal|ValueById|Source|TextHidden|InputMoney|InputDate|InputAddress|Textarea|UList|MarkDown|Legend|LiBegin|Mult|Trim|StateLink|StateValDBInt|DBIntWhere|DBRowExt|DBStringWhere)\\b\\(.*\\)"
+		},
+		"variable-illegal": {
+			"name": "invalid.illegal.needle",
+			"match": "(\\#[a-zA-Z0-9_-]*\\#)"
+		},
+		"strings": {
+			"name": "string.quoted.double.logicor",
+			"begin": "(?<!\\\\)\"",
+			"end": "(?<!\\\\)\"",
+			"pattern": ".*?"
+		},
+		"strings2": {
+			"name": "string.quoted.single.logicor",
+			"begin": "(?<!\\\\)`",
+			"end": "(?<!\\\\)`",
+			"pattern": ".*?"
+		},
+		"comments": {
+			"name": "comment.line.needle",
+			"match": "//.*$"
+		},
+		"block-comments": {
+			"name": "comment.block.needle",
+			"begin": "/\\*",
+			"end": "\\*/",
+			"pattern": ".*?"
+		},
+		"cyr-text": {
+			"name": "comment.line.needle",
+			"match": "[а-яА-Я]"
+		},
+		"expression": {
+			"name": "meta.expression.needle",
+			"patterns": [
+				{
+					"include": "#cyr-text"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#strings2"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#block-comments"
+				},
+				{
+					"include": "#DBFind-param"
+				},
+				{
+					"include": "#control-statement"
+				},
+				{
+					"include": "#needle"
+				},
+				{
+					"include": "#needle-ext"
+				},
+				{
+					"include": "#type-literal"
+				},
+				{
+					"include": "#variable-illegal"
+				},
+				{
+					"include": "#defined-var"
+				},
+				{
+					"include": "#autodefined"
+				},
+				{
+					"include": "#removed"
+				}
+			]
+		}
+	},
+	"scopeName": "source.needle"
+}

@@ -1,0 +1,9 @@
+node_modules
+*.vsix
+.DS_Store
+yarn.lock
+tmp
+.vscodeignore
+.vscode
+package-lock.json
+/pkg

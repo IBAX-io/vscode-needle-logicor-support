@@ -1,0 +1,68 @@
+{
+  "name": "needle-logicor-support",
+  "displayName": "IBAX Language Support",
+  "description": "Needle and Logicor language support",
+  "version": "1.0.0",
+  "publisher": "ibax",
+  "icon": "src/img/logo.png",
+  "author": {
+    "name": "ibax"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibax-io/vscode-needle-logicor-support.git"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "logicor",
+    "needle",
+    "ibax"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "needle",
+        "extensions": [
+          ".sim"
+        ],
+        "configuration": "./src/language-conf_needle.json"
+      },
+      {
+        "id": "logicor",
+        "extensions": [
+          ".ptl"
+        ],
+        "configuration": "./src/language-conf_logicor.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "needle",
+        "scopeName": "source.needle",
+        "path": "./src/syntaxes/needle.tmLanguage.json"
+      },
+      {
+        "language": "logicor",
+        "scopeName": "source.logicor",
+        "path": "./src/syntaxes/logicor.tmLanguage.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:needle",
+    "onLanguage:logicor"
+  ],
+  "main": "src/extension",
+  "devDependencies": {
+    "vscode": "^1.1.8"
+  },
+  "dependencies": {
+    "jslint": "^0.12.0",
+    "npm": "^6.1.0"
+  }
+}
