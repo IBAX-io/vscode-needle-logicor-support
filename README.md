@@ -13,12 +13,28 @@ Search extension by any of keywords: ibax, needle, logicor
 
 [Install Extension](https://marketplace.visualstudio.com/items?itemName=ibax.needle-logicor)
 
+### Installation
 
-### 1. Install from Vscode
+Make sure you have Node.js installed. Then run:
+```shell
+npm install -g vsce
+```
+
+You can use **vsce** to easily package and publish your extensions:
+
+```shell
+$ cd myExtension
+$ vsce package
+# myExtension.vsix generated
+$ vsce publish
+# <publisherID>.myExtension published to VS Code Marketplace
+```
+
+### Install from Vscode
 
 Find the Extensions and search **needle-logicor-support**, Click the **Install** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the new extension.
 
-### 2. Install from a VSIX
+### Install from a VSIX
 
 You can manually install a VS Code extension packaged in a `.vsix` file. Using the **Install from VSIX...** command in the Extensions view command drop-down, or the **Extensions: Install from VSIX...** command in the **Command Palette**, point to the `.vsix` file.
 

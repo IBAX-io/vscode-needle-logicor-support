@@ -83,7 +83,7 @@
 		},
 		"cyr-text": {
 			"name": "comment.line.g",
-			"match": "[а-яА-Я]"
+			"match": "[а-zА-Z]"
 		},
 		"expression": {
 			"name": "meta.expression.logicor",

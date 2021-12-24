@@ -27,7 +27,7 @@
 		},
 		"needle-ext": {
 			"name": "entity.name.function.needle",
-			"match": "(?<!\\.|\\$)\\b(MoneyTransfer|NewContract|EditContract|ActivateContract|NewEcosystem|NewParameter|EditParameter|NewMenu|EditMenu|AppendMenu|NewPage|EditPage|AppendPage|NewLang|EditLang|NewSign|EditSign|NewBlock|EditBlock|NewTable|EditTable|NewColumn|EditColumn|Import|DeactivateContract)\\b(?!\\$|\\.)"
+			"match": "(?<!\\.|\\$)\\b(MoneyTransfer|NewContract|EditContract|ActivateContract|NewEcosystem|NewParameter|EditParameter|NewMenu|EditMenu|AppendMenu|NewPage|EditPage|AppendPage|NewLang|EditLang|NewSign|EditSign|NewSnippet|EditSnippet|NewTable|EditTable|NewColumn|EditColumn|Import|DeactivateContract)\\b(?!\\$|\\.)"
 		},
 		"autodefined": {
 			"name": "variable.language.needle",
@@ -69,7 +69,7 @@
 		},
 		"cyr-text": {
 			"name": "comment.line.needle",
-			"match": "[а-яА-Я]"
+			"match": "[а-zА-Z]"
 		},
 		"expression": {
 			"name": "meta.expression.needle",

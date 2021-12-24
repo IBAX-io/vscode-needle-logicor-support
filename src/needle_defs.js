@@ -329,16 +329,16 @@ const functionDefs = {
         insertText: 'EditSign("Id,Value,Conditions", ',
         params: []
     },
-    NewBlock: {
-        label: 'NewBlock(Name, Value, Conditions string)',
+    NewSnippet: {
+        label: 'NewSnippet(Name, Value, Conditions string)',
         documentation: '',
-        insertText: 'NewBlock("Name,Value,Conditions", ',
+        insertText: 'NewSnippet("Name,Value,Conditions", ',
         params: []
     },
-    EditBlock: {
-        label: 'EditBlock(Id int, Value, Conditions string)',
+    EditSnippet: {
+        label: 'EditSnippet(Id int, Value, Conditions string)',
         documentation: '',
-        insertText: 'EditBlock("Id,Value,Conditions", ',
+        insertText: 'EditSnippet("Id,Value,Conditions", ',
         params: []
     },
     NewTable: {

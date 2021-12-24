@@ -303,7 +303,7 @@ const functionDefs = {
         insertText: 'Include',
         params: [{
             label: 'Name',
-            documentation: 'Page or block name to include',
+            documentation: 'Page or snippet name to include',
             insertText: 'Name: '
         }]
     },

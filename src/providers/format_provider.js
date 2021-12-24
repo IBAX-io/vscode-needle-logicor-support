@@ -163,7 +163,7 @@ class SimpleFormatProvider {
         this.offset = 0
         this.tabs = 0
         this.type = type
-        this.globalTablesPattern = /(DBFind|DBUpdate|DBInsert)\(\s*"?(keys|history|languages|sections|menu|pages|blocks|signatures|contracts|parameters|tables|app_params|notifications|roles|roles_participants|members|applications|binaries|buffer_data|ecosystems|system_parameters|voting_templates|votings|votings_participants|votings_subject)"?/
+        this.globalTablesPattern = /(DBFind|DBUpdate|DBInsert)\(\s*"?(keys|history|languages|sections|menu|pages|snippets|signatures|contracts|parameters|tables|app_params|notifications|roles|roles_participants|members|applications|binaries|buffer_data|ecosystems|system_parameters|voting_templates|votings|votings_participants|votings_subject)"?/
 
         this.logicorRules = [{
             pattern: /^Divs:?\(?([\w-\s]+)\)?$/, // Divs: a | Divs(a)
